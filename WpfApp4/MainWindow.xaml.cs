@@ -85,12 +85,16 @@ namespace WpfApp4
 
         private void Button_Click_GetLocalDataGrid(object sender, RoutedEventArgs e)
         {
-            //if (!isParsed)
-            ParseExcelToDataGrid();
-            
-            MessageBox.Show($"Успешно загружена таблица из локального файла");
-            //else
-            //    MessageBox.Show("Таблица уже загружена");
+            if (!isParsed)
+            {
+                ParseExcelToDataGrid();
+
+                MessageBox.Show($"Успешно загружена таблица из локального файла");
+            }
+            else
+            {
+                MessageBox.Show("Таблица уже загружена");
+            }
         }
 
         private void Button_Click_DownloadFromInternet(object sender, RoutedEventArgs e)

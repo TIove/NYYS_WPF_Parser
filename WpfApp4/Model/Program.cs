@@ -13,10 +13,6 @@ namespace WpfApp4
 {
     public class Program
     {
-        private void IterationOfRowParse()
-        {
-
-        }
         public static void ParseExcel(ref int numRowsOnPage, ref int maxPages, ref bool isParsed, List<Danger> dangers, List<string> changedDangers)
         {
             changedDangers.Clear();
@@ -45,8 +41,6 @@ namespace WpfApp4
 
                 foreach (Excel.Worksheet worksheet in sheets)
                 {
-                    DateTime dateTimeNow = DateTime.Now;
-                    
                     Excel.Range UsedRange = worksheet.UsedRange;
                    
                     Excel.Range urRows = UsedRange.Rows;
